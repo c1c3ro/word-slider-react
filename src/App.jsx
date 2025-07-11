@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Board from "./components/Board";
 import WordList from "./components/WordList";
+import CookieModal from "./components/CookieModal";
 import "./index.css";
 
 function App() {
@@ -43,7 +44,7 @@ function App() {
 
   return (
     <div className="container">
-      <img src="/assets/word-slider-logo.webp" alt="Logo" />
+      <img src="/assets/word-slider-logo.webp" alt="Logo" className="logo" />
       <WordList words={words} />
       <Board
         board={board}
@@ -53,6 +54,7 @@ function App() {
         setTurns={setTurns}
       />
       <h1>Movimentos: {turns}</h1>
+      <CookieModal />
     </div>
   );
 }

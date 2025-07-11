@@ -1,0 +1,65 @@
+.cookie-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+  z-index: 1000;
+}
+
+.cookie-modal.fade-out {
+  opacity: 0;
+}
+
+.cookie-box {
+  background: #607196;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  animation: popup 0.4s ease-out;
+}
+
+.cookie-box h2 {
+  margin-bottom: 1rem;
+}
+
+.cookie-box p {
+  font-size: 14px;
+  margin-bottom: 1rem;
+  line-height: 1.5em;
+}
+
+.cookie-box button {
+  padding: 10px 24px;
+  background-color: #f6f5f5;
+  color: #607196;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cookie-box button:hover {
+  background-color: #e4e4e4;
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
